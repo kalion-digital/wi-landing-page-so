@@ -1,0 +1,47 @@
+<svg width="918" height="1149" viewBox="0 0 918 1149" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="918" height="1149" fill="black" fill-opacity="0"/>
+<rect width="918" height="1149" fill="#F4F4F6"/>
+<rect width="875" height="1104.1" fill="black" fill-opacity="0" transform="translate(22 22)"/>
+<rect width="874.543" height="17.0964" fill="black" fill-opacity="0" transform="translate(22 22)"/>
+<line x1="33" y1="21.5" x2="886" y2="21.5" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="16.5443" height="17.0964" fill="black" fill-opacity="0" transform="translate(22 22)"/>
+<rect width="16.5443" height="8.54828" fill="black" fill-opacity="0" transform="translate(22 30.5481)"/>
+<line x1="22" y1="33.4673" x2="38.5443" y2="33.4673" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="32.8398" y1="38.5964" x2="38.5448" y2="38.5964" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="24.2812" y1="30.0481" x2="29.9862" y2="30.0481" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="9.12614" height="17.0962" fill="black" fill-opacity="0" transform="translate(29.4141 22)"/>
+<line x1="39.0391" y1="33.3975" x2="39.0391" y2="39.0963" stroke="#282A3E" stroke-opacity="0.12"/>
+<line y1="-0.5" x2="17.0963" y2="-0.5" transform="translate(32.8359 22) rotate(90.1222)" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="29.9141" y1="24.2795" x2="29.9141" y2="29.9783" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="16.5443" height="17.0964" fill="black" fill-opacity="0" transform="translate(896.543 22) scale(-1 1)"/>
+<rect width="16.5443" height="8.54828" fill="black" fill-opacity="0" transform="translate(896.543 30.5481) scale(-1 1)"/>
+<line x1="896.543" y1="33.4673" x2="879.999" y2="33.4673" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="885.703" y1="38.5964" x2="879.998" y2="38.5964" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="894.262" y1="30.0481" x2="888.557" y2="30.0481" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="9.12614" height="17.0962" fill="black" fill-opacity="0" transform="translate(889.129 22) scale(-1 1)"/>
+<line x1="879.504" y1="33.3975" x2="879.504" y2="39.0963" stroke="#282A3E" stroke-opacity="0.12"/>
+<line y1="-0.5" x2="17.0963" y2="-0.5" transform="translate(885.707 22) scale(1 -1) rotate(-89.8778)" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="888.629" y1="24.2795" x2="888.629" y2="29.9783" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="874.543" height="17.0965" fill="black" fill-opacity="0" transform="translate(22 1109)"/>
+<line y1="-0.5" x2="850.912" y2="-0.5" transform="translate(33 1125.97)" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="16.5443" height="17.0964" fill="black" fill-opacity="0" transform="translate(22 1126.1) scale(1 -1)"/>
+<rect width="16.5443" height="8.54818" fill="black" fill-opacity="0" transform="translate(22 1117.55) scale(1 -1)"/>
+<line x1="22" y1="1114.63" x2="38.5443" y2="1114.63" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="32.8398" y1="1109.5" x2="38.5448" y2="1109.5" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="24.2812" y1="1118.05" x2="29.9862" y2="1118.05" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="9.12614" height="17.0964" fill="black" fill-opacity="0" transform="translate(29.4141 1126.1) scale(1 -1)"/>
+<line x1="39.0391" y1="1114.7" x2="39.0391" y2="1109" stroke="#282A3E" stroke-opacity="0.12"/>
+<line y1="-0.5" x2="17.0963" y2="-0.5" transform="translate(32.8359 1126.1) scale(-1 1) rotate(-89.8778)" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="29.9141" y1="1123.82" x2="29.9141" y2="1118.12" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="16.5443" height="17.0964" fill="black" fill-opacity="0" transform="translate(896.543 1126.1) rotate(-180)"/>
+<rect width="16.5443" height="8.54818" fill="black" fill-opacity="0" transform="translate(896.543 1117.55) rotate(-180)"/>
+<line x1="896.543" y1="1114.63" x2="879.999" y2="1114.63" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="885.703" y1="1109.5" x2="879.998" y2="1109.5" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="894.262" y1="1118.05" x2="888.557" y2="1118.05" stroke="#282A3E" stroke-opacity="0.12"/>
+<rect width="9.12614" height="17.0964" fill="black" fill-opacity="0" transform="translate(889.129 1126.1) rotate(-180)"/>
+<line x1="879.504" y1="1114.7" x2="879.504" y2="1109" stroke="#282A3E" stroke-opacity="0.12"/>
+<line y1="-0.5" x2="17.0963" y2="-0.5" transform="translate(885.707 1126.1) rotate(-89.8778)" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="888.629" y1="1123.82" x2="888.629" y2="1118.12" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="896.5" y1="1114" x2="896.5" y2="34" stroke="#282A3E" stroke-opacity="0.12"/>
+<line x1="22.5" y1="1114" x2="22.5" y2="34" stroke="#282A3E" stroke-opacity="0.12"/>
+</svg>

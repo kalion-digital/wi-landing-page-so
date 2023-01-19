@@ -1,0 +1,265 @@
+form.standart-form {
+	width: 415px;
+	// width: 100%;
+	text-align: center;
+	background: url(../img/form-bg.svg) 50% 0 no-repeat;
+	background-size: cover;
+	padding-top: 40px;
+	.form-title {
+		font-family: 'Cormorant Garamond';
+		font-style: italic;
+		font-weight: 400;
+		line-height: normal;
+		font-size: 30px;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 40px;
+		span {
+			display: block;
+			font-size: 20px;
+		}
+	}
+	input.name,
+	input.email,
+	input.phone {
+		width: 300px;
+		height: 55px;
+		background: rgba(214, 215, 219, 0.15);
+		border: 1px solid rgba(255, 255, 255, 0.29);
+		border-radius: 3px;
+		padding-left: 15px;
+		font-weight: 300;
+		line-height: 55px;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		font-family: Circe;
+		font-size: 16px;
+		color: #FFFFFF;
+		&::placeholder {
+			color: #FFFFFF;
+		}
+		&:focus {
+			background: #D1C2A6;
+			border: 1px solid rgba(255, 255, 255, 0.29);
+			color: #464B65;
+			font-weight: 400;
+			&::placeholder {
+				color: #464B65;
+			}
+		}
+	}
+	input.email {
+		margin-top: 15px;
+	}
+	&:after {
+		content: "";
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: rgba(255,255,255, .7) url(../img/loading.svg) 50% no-repeat;
+		z-index: 10;
+	}
+	&.loading {
+		&:after {
+			display: block;
+		}
+	}
+}
+
+
+.form2__top-block {
+	height: 113px;
+
+	@include flex-center;
+	flex-direction: column;
+
+	.top-block__txt1 {
+		font-family: 'Cormorant Garamond';
+		font-style: italic;
+		font-weight: 600;
+		line-height: normal;
+		font-size: 30px;
+		text-align: center;
+
+		color: #FFFFFF;
+	}
+
+	.top-block__txt2 {
+		font-family: 'Cormorant Garamond';
+		font-style: italic;
+		font-weight: normal;
+		line-height: normal;
+		font-size: 20px;
+		text-align: center;
+
+		color: #FFFFFF;
+	}
+}
+
+.form2__bot-block {
+	padding-top: 55px;
+
+	.btn {
+		width: 285px;
+		height: 55px;
+		background: #D1C2A6;
+		position: relative;
+		top: 20px;
+		font-weight: bold;
+	}
+}
+
+.form-online,
+.form-offline {
+	width: 413px;
+	//height: 430px;
+
+	background-size: 100%;
+	padding: 0px 12px;
+
+	.form3__bottom-block {
+		display: none;
+	}
+
+	.modal-content {
+		background: transparent;
+	}
+
+	.part {
+		min-width: 285px;
+		margin-bottom: 25px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	input.name,
+	input.email,
+	input.phone,
+	input.country,
+	input.city {
+		width: 285px;
+		height: 55px;
+		background: rgba(214, 215, 219, 0.15);
+		border: 1px solid rgba(255, 255, 255, 0.29);
+		font-family: Circe;
+		line-height: normal;
+		font-size: 14px;
+		padding-left: 29px;
+		margin-bottom: 0;
+		font-weight: 200;
+		@incude ease(.4s);
+		outline: none;
+
+		&:focus {
+			background: #D1C2A6;
+			border: 1px solid rgba(255, 255, 255, 0.29);
+			color: #464B65;
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+
+	input.phone {
+		padding-left: 50px;
+	}
+
+	input::placeholder {
+		color: #FFFFFF;
+	}
+
+	input:focus::placeholder {
+		color: #464B65;
+	}
+
+	.top-block__txt1 {
+		font-family: 'Cormorant Garamond';
+		font-style: italic;
+		font-weight: 600;
+		font-size: 30px;
+		text-align: center;
+		line-height: 26px;
+		color: #FFFFFF;
+		margin-bottom: 41px;
+
+		@include mobile {
+			font-size: 26px;
+		}
+
+		span {
+			font-size: 20px;
+
+			@include mobile {
+			font-size: 16px;
+		}
+		}
+	}
+
+	.btn {
+		width: 285px;
+		// height: 55px;
+		background: #D1C2A6;
+		position: relative;
+		// top: 20px;
+		font-weight: bold;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.bottom-block__txt1 {
+		font-family: Circe;
+		line-height: normal;
+		font-size: 14px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+		color: #FFFFFF;
+	}
+
+	.bottom-block__txt2 {
+		font-family: 'Cormorant Garamond';
+		font-style: italic;
+		font-weight: 600;
+		line-height: normal;
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 44px;
+		color: #FFFFFF;
+
+		span {
+			font-size: 30px;
+		}
+	}
+
+	.form3__top-block {
+		padding-top: 41px;
+		height: 430px;
+		background-image: url(../../img/modalform-bg.jpg);
+	}
+
+	.form3__bottom-block {
+		padding-top: 20px;
+		height: 384px;
+		background-image: url(../../img/modalform-bg.jpg);
+	}
+
+	.country {
+		margin-bottom: 25px !important;
+	}
+
+
+	/* .mask-block {
+		width: 285px;
+		height: 55px;
+		background: transparent;
+		position: absolute;
+		z-index: 2;
+		left: 58px;
+		bottom: -22px;
+	} */
+}

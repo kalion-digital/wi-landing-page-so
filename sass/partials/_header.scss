@@ -1,0 +1,91 @@
+.header {
+	background: url(../img/header.jpg) 50% 0 no-repeat;
+	padding-top: 44px;
+	// padding-bottom: 70px;
+	.course {
+		font-family: 'Cormorant Garamond';
+		font-weight: 700 ;
+		font-size: 20px;
+		line-height: 26px;
+		text-align: center;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		color: #F1B3CA;
+		display: block;
+		width: 302px;
+		text-align: center;
+		background: url(../img/course-bg.svg) 50% no-repeat;
+		// background-size: contain;
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	.title {
+		font-family: 'Cormorant Garamond';
+		font-style: normal;
+		font-weight: 300;
+		line-height: 50px;
+		font-size: 75px;
+		color: #FFFFFF;
+		margin-bottom: 20px;
+		b {
+			font-weight: 700;
+		}
+	}
+	.desc {
+		font-family: Circe;
+		line-height: 22px;
+		font-size: 18px;
+		color: #FFFFFF;
+		font-weight: 300;
+		b {
+			font-weight: 700;
+		}
+	}
+	.timer {
+		padding-top: 120px;
+		width: 495px;
+		text-align: center;
+	}
+	.timer-title {
+		font-family: Circe;
+		line-height: 20px;
+		font-size: 15px;
+		text-align: center;
+		letter-spacing: 0.03em;
+		color: #FFFFFF;
+		font-weight: 300;
+		text-align: center;
+		b {
+			font-weight: 700;
+			span {
+				color: #4B506A;
+				&.big {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+	.soon-slot-animate .soon-slot-new {
+		color: #fff;
+		font-family: Circe;
+		font-weight: 900;
+	}
+	.soon-wrapper[data-visual] .soon-value,
+	.soon[data-visual] .soon-value {
+		top: 53%;
+	}
+	.soon[data-layout*=group] .soon-label {
+		color: #fff;
+		font-family: Circe;
+		font-weight: 700;
+		text-transform: uppercase;
+		position: absolute;
+		transform: translateY(50px);
+	}
+	.soon-ring {
+		background: url(../img/ring.svg) 50% no-repeat;
+		background-size: 117%;
+
+		border-radius: 50%;
+	}
+}

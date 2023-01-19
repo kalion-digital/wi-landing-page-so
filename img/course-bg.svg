@@ -1,0 +1,10 @@
+<svg width="302" height="26" viewBox="0 0 302 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.651401" y="0.651401" width="7.89683" height="7.89683" transform="translate(208.127 13.3101) scale(1.01933 0.980285) rotate(-45)" stroke="white" stroke-width="1.3028"/>
+<line y1="-0.651351" x2="23.053" y2="-0.651351" transform="translate(220.271 13.3101)" stroke="white" stroke-width="1.3027"/>
+<rect x="0.651401" y="0.651401" width="7.89683" height="7.89683" transform="translate(89.2695 13.3101) scale(-1.01933 0.980285) rotate(-45)" stroke="white" stroke-width="1.3028"/>
+<line y1="-0.651351" x2="23.053" y2="-0.651351" transform="translate(77.125 13.3101) scale(-1 1)" stroke="white" stroke-width="1.3027"/>
+<rect x="0.651401" y="0.651401" width="17.4517" height="17.4517" transform="translate(230.244 13) scale(1.01933 0.980285) rotate(-45)" stroke="white" stroke-opacity="0.2" stroke-width="1.3028"/>
+<line y1="-0.651351" x2="46.9963" y2="-0.651351" transform="translate(255.004 13)" stroke="white" stroke-opacity="0.2" stroke-width="1.3027"/>
+<rect x="0.651401" y="0.651401" width="17.4517" height="17.4517" transform="translate(71.7559 13) scale(-1.01933 0.980285) rotate(-45)" stroke="white" stroke-opacity="0.2" stroke-width="1.3028"/>
+<line y1="-0.651351" x2="46.9963" y2="-0.651351" transform="translate(46.9961 13) scale(-1 1)" stroke="white" stroke-opacity="0.2" stroke-width="1.3027"/>
+</svg>

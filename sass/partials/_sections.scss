@@ -1,0 +1,214 @@
+.sec1 {
+	padding-top: 58px;
+	padding-bottom: 100px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-image: url(../img/ornament.svg), url(../img/cups-flowers.png);
+	background-position: 50% 100%, 50% 0;
+	.sec-title {
+		font-family: 'Cormorant Garamond';
+		font-style: normal;
+		font-weight: 500;
+		line-height: 45px;
+		font-size: 50px;
+		text-align: center;
+		color: #4B506A;
+		margin-bottom: 50px;
+		b {
+			font-weight: 700;
+			display: block;
+		}
+	}
+	.tabs-menu {
+		margin-bottom: 80px;
+		.tabs-header-text {
+			display: inline-block;
+			font-family: Circe;
+			line-height: normal;
+			font-size: 16px;
+			color: #464B65;
+			line-height: 45px;
+		}
+		.tabs-headers-offline {
+			display: inline-block;
+		}
+		.tab-header {
+			font-family: Circe;
+			line-height: normal;
+			font-weight: 700;
+			font-size: 12px;
+			text-align: center;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: #464B65;
+			line-height: 45px;
+			width: 117px;
+			display: inline-block;
+			border: 1px solid #464B65;
+			margin: 0 5px;
+			cursor: pointer;
+			transition: all 0.2s linear;
+			&.active {
+				color: #FFFFFF;
+				background: #4B506A;
+			}
+		}
+	}
+	.package {
+		position: relative;
+		.discount-block {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 266px;
+			height: 266px;
+			background: url(../img/sale.svg) 50% no-repeat;
+			top: -92px;
+			right: -108px;
+			z-index: 2;
+			.discount-text {
+				font-family: Circe;
+				line-height: 21px;
+				font-size: 12px;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				font-weight: 900;
+				transform: translateY(2px);
+				b {
+					font-weight: 900;
+					font-size: 20px;
+				}
+			}
+		}
+		.info-block {
+			background: #F4F4F6 url(../img/frame.svg) 50% 25px no-repeat;
+			padding-top: 56px;
+			padding-left: 24px;
+			padding-right: 24px;
+			padding-bottom: 20px;
+		}
+		.package-title {
+			font-family: Circe;
+			line-height: normal;
+			font-weight: 700;
+			font-size: 16px;
+			text-align: center;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: #464B65;
+			margin-bottom: 20px;
+		}
+		.package-info {
+			text-align: left;
+			display: inline-block;
+			max-width: 240px;
+			li {
+				font-family: Circe;
+				line-height: 26px;
+				font-size: 16px;
+				color: #464B65;
+				list-style-type: disc;
+			}
+		}
+		.price-block {
+			background: #464B65 url(../img/frame.svg) 50% calc(100% - 25px) no-repeat;
+			padding-left: 24px;
+			padding-right: 24px;
+			padding-top: 25px;
+			padding-bottom: 45px;
+			.price-old {
+				display: inline-block;
+				font-family: Circe;
+				line-height: 49px;
+				font-size: 22px;
+				text-decoration-line: line-through;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.3);
+			}
+			.price {
+				display: inline-block;
+				font-family: Circe;
+				line-height: 67px;
+				font-size: 30px;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				font-weight: 900;
+			}
+			.btn {
+				display: inline-block;
+				background: #D1C2A6;
+				width: 244px;
+				line-height: 55px;
+				font-family: Circe;
+				font-size: 12px;
+				text-align: center;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				margin-bottom: 25px;
+			}
+			.economy {
+				font-family: Circe;
+				line-height: normal;
+				font-size: 12px;
+				text-align: center;
+				letter-spacing: 4px;
+				text-transform: uppercase;
+				color: #F4F4F6;
+				b {
+					font-size: 18px;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.tab-offline {
+		display: none;
+	}
+	.start-text {
+		font-family: 'Cormorant Garamond';
+		font-style: italic;
+		font-weight: 500;
+		line-height: 18px;
+		font-size: 20px;
+		text-align: center;
+		color: #4B506A;
+		margin-bottom: 40px;
+		b {
+			font-weight: 700;
+		}
+	}
+	.tab-offline {
+		.package {
+			.info-block {background: #F4F4F6 url(../img/frame-big.svg) 50% 25px no-repeat}
+			.price-block{
+				background: #464B65 url(../img/frame-big.svg) 50% calc(100% - 25px) no-repeat;
+				.btn {
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 25px;
+				}
+			}
+			.package-info {
+				max-width: 300px;
+				min-height: 550px;
+				li {
+					font-family: Circe;
+					line-height: 20px;
+					font-size: 14px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.package-standart {
+			.info-block {
+				.package-info {
+					li {
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+}

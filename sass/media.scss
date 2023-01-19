@@ -1,0 +1,210 @@
+/*********************************************\
+		Desktop First Method
+\*********************************************/
+// STYLES FOR TABLETS //
+@media only screen and (max-width : 1200px) {
+
+	.program {
+		max-width: 500px;
+		background-image: none;
+	}
+
+
+	.header {
+		text-align: center;
+		padding-top: 30px;
+		background: url(../img/header-md.jpg) 50% 0 no-repeat;
+		.logo {
+			img {
+				height: 33px;
+			}
+		}
+		.title {
+			line-height: 49px;
+			font-size: 65px;
+			margin-bottom: 30px;
+		}
+		.course {
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
+		.timer {
+			padding-top: 80px;
+			margin: 0 auto;
+		}
+	}
+
+	.sec1 {
+		background-image: url(../img/ornament.svg), url(../img/cups-flowers-md.png);
+		background-position: 50% 100%, 50% 0;
+		.sec-title {
+			line-height: 38px;
+			font-size: 45px;
+		}
+		.tabs-menu {
+			.tab-header.online {
+				display: block;
+				margin: 0 auto;
+				margin-bottom: 20px;
+			}
+			.tabs-header-text {
+				margin-bottom: 22px;
+			}
+		}
+		.package {
+			max-width: 350px;
+		}
+		.tab-offline .package .info-block,
+		.tab-offline .package .price-block {
+			background-image: none;
+		}
+	}
+
+
+	.main-footer {
+		max-height: 100%;
+		.logo {
+			display: block;
+			text-align: center;
+			margin-bottom: 55px;
+		}
+		.popup-link {
+			display: block;
+			font-size: 13px;
+			line-height: 20px;
+		}
+		.phone,
+		.email {
+			a,
+			p {
+				line-height: 23px;
+				font-size: 13px;
+			}
+		}
+		.phone-colums{
+			.col1 {
+				margin-right: 20px;
+			}
+		}
+	}
+
+}
+
+
+// STYLES FOR MOBILES //
+@media only screen and (max-width : 750px) {
+
+	.program {
+		margin-top: 100px;
+		max-width: 320px;
+		background-image: none;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.program .program-item ul:before {
+		left: 0;
+		font-size: 100px;
+		line-height: 100px;
+		top: -50px;
+	}
+
+	.header .soon[data-layout*=group] .soon-label {
+		transform: translateY(35px);
+	}
+
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		transition-property: none !important;
+		transform: none !important;
+		animation: none !important;
+	}
+
+	.header {
+		overflow: hidden;
+		padding-top: 25px;
+		background: url(../img/header-xs.jpg) 50% 0 no-repeat;
+		.course {
+			background: url(../img/decor-xs.svg) 50% no-repeat;
+			font-size: 16px;
+			line-height: 20px;
+			margin-top: 15px;
+			margin-bottom: 8px;
+		}
+		.title {
+			line-height: 26px;
+			font-size: 33px;
+			margin-bottom: 18px;
+		}
+		.desc {
+			line-height: 22px;
+			font-size: 15px;
+			max-width: 240px;
+			br {display: none;}
+			margin: 0 auto;
+		}
+		.timer {
+			padding-top: 80px;
+			width: 100%;
+		}
+	}
+
+	.sec1 {
+		overflow: hidden;
+		padding-top: 40px;
+		.sec-title {
+			line-height: 22px;
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+		.tabs-menu {
+			margin-bottom: 40px;
+			.tabs-header-text {
+				font-size: 14px;
+				line-height: 20px;
+			}
+			.tabs-headers-offline {
+				.tab-header {
+					margin-bottom: 18px;
+				}
+			}
+		}
+		.start-text {
+			b {
+				display: block;
+			}
+		}
+		.tab-offline {
+			.package {
+				&.package-standart{
+					margin-bottom: 77px;
+				}
+				.package-info {
+					max-height: 100%;
+				}
+			}
+		}
+	}
+
+
+
+	.main-footer {
+		text-align: center;
+		.phone-colums {
+			justify-content: space-between;
+		}
+		.logo {
+			margin-bottom: 40px;
+			img {
+				width: 131px;
+			}
+		}
+		.docs {
+			margin-bottom: 30px;
+		}
+		.email {
+			margin-bottom: 30px;
+		}
+	}
+}
+

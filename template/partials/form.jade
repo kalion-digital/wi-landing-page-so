@@ -1,0 +1,21 @@
+form.standart-form.form-online#formOnline(accept-charset="utf-8" onsubmit="return validate(formOnline);" action="" method="post")
+	.form3__top-block
+		p.top-block__txt1 Бронируй место на курсе, <br><span>вместе выберем удобный тебе формат и даты</span>
+		.part.part1
+			input.name(name="name", type="text", placeholder="Твоё имя", required="")
+		.part.part2
+			input.phone#phone(name="phone", type="text", required="" placeholder="Твой номер телефона")
+		.part.part3
+			input.email(name="email", type="email", placeholder="Твой e-mail", required="")
+		button.btn.subm(type="submit") Продолжить бронь
+		//.mask-block
+		.hidden-inputs.
+			<input type="hidden" name="type" value="online">
+			<input type="hidden" name="plan" value="online">
+			<input type="hidden" name="sum" value="284">
+			<input type="hidden" name="city" value="">
+			<input type="hidden" name="product" value="vpo_so_short">
+			<input type="hidden" name="utm_source" value="">
+			<input type="hidden" name="utm_medium" value="">
+			<input type="hidden" name="utm_term" value="">
+			<input type="hidden" name="utm_campaign" value="">

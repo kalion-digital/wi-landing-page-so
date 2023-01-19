@@ -1,0 +1,39 @@
+.subm,
+.step2 {
+	cursor: pointer;
+	border: none;
+	display: block;
+	margin: 0 auto;
+	transition: all 0.3s linear;
+	margin-top: 15px;
+	width: 285px;
+	line-height: 55px;
+	font-family: Circe;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	display: block;
+	background: #D1C2A6;
+	color: #FFFFFF;
+	transform: translateY(50%);
+	&:hover {
+		transform: translateY(50%) scale(1.1);
+	}
+}
+
+.program-btn {
+	background: #464B65;
+	width: 320px;
+	line-height: 55px;
+	font-family: Circe;
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-top: 56px;
+}
+
+.step2 {
+
+}

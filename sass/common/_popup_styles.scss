@@ -1,0 +1,143 @@
+.modal-overlay {
+	display: none;
+	padding-top: 1px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 1000000;
+	overflow: auto;
+	align-items: center;
+	justify-content: center;
+	.modal-content {
+		// width: 60vw;
+		margin-bottom: 0px;
+		border-radius: 4px;
+		// height:70vh;
+	}
+	.close-button {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		top: 30px;
+		right: 40px;
+		padding: 0px 14px;
+		padding-top: 4px;
+		cursor: pointer;
+		transition: 0.2s linear;
+		.one {
+			height: 50px;
+			width: 2px;
+			background-color: #fff;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			transition: 0.2s linear;
+		}
+		.two {
+			margin-top: -50px;
+			height: 50px;
+			width: 2px;
+			background-color: #fff;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transition: 0.2s linear;
+		}
+		&:hover {
+			.one {
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transition: 0.2s linear;
+				background-color: #fff;
+			}
+			.two {
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transition: 0.2s linear;
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+#modal-video {
+	.modal-content {
+		height: auto;
+		width: 100%;
+	}
+	.video {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+#modal-program {
+	align-items: start;
+}
+
+.program {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: #F4F4F6 url(../img/program.svg) 50% 0 no-repeat;
+	max-width: 920px;
+	margin: 50px auto;
+
+	.program-item {
+		margin-bottom: 40px;
+		ul {
+			position: relative;
+			&:before {
+				content: attr(data-number);
+				display: block;
+				font-family: 'Cormorant Garamond';
+				font-style: normal;
+				font-weight: 600;
+				line-height: 150px;
+				font-size: 150px;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				position: absolute;
+				left: -34px;
+				top: -70px;
+				color: #F4EAEF;
+				z-index: 1;
+			}
+		}
+		li {
+			font-family: Circe;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 23px;
+			font-size: 14px;
+			color: #282A3E;
+			position: relative;
+			z-index: 3;
+			&:first-child {
+				font-weight: bold;
+			}
+			&.final {
+				font-family: 'Cormorant Garamond';
+				font-style: italic;
+				font-weight: 500;
+				line-height: 23px;
+				font-size: 30px;
+				color: #282A3E;
+			}
+		}
+
+	}
+}

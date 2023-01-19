@@ -1,0 +1,332 @@
+<!-- build:js js/libs.min.js -->
+//- script(src='js/wow.min.js')
+script(src='js/AnchorScroller.js')
+script(src='js/cookie.js')
+script(src='js/jquery.cookie.js')
+script(src='js/validator.js')
+script(src='js/script.js')
+script(src='js/popup_script.js')
+script(src='js/soon.min.js')
+//- script(src='js/jquery.countdown.js')
+//- script(src='js/slick.min.js')
+<!-- endbuild -->
+script(src='js/intlTelInput.min.js')
+script(src='js/common.js')
+<!--auto country code srcipt -->
+script.
+	$(function(){
+		//popup link
+		$("body").click(function () {
+			$('.popup-layout').fadeOut(200);
+		});
+		$(".popup, .popup-link").click(function (e) {
+			e.stopPropagation();
+		});
+
+		// popup close
+		$('.popup__close').click(function () {
+			hidePopup();
+		});
+	});
+
+	function showPopup(popupId) {
+		hidePopup();
+		$(popupId).fadeIn(400);
+	}
+
+	function hidePopup() {
+		$('.popup-layout, .popup-layout-payment, .modal').fadeOut(400);
+	}
+
+
+script.
+	$(document).ready(function(){
+		var element = document.getElementById('soon');
+		//- var dateEnd = '2018-08-24';
+		//- console.log($.cookie("timer"));
+		//- if($.cookie("timer")) {
+		//- 	dateEnd = $.cookie("timer");
+		//- }
+		//- else {
+		//- 	dateEnd = new Date();
+		//- 	dateEnd.setDate(dateEnd.getDate()+2);
+		//- 	$.cookie("timer", dateEnd, {expires: null});
+		//- 	dateEnd = '2018-08-24';
+		//- };
+
+		var options = {
+			due: '2018-08-24',
+			layout: 'label-big tight ',
+			face: 'slot',
+			format: 'h,m,s',
+			labelsHours: "Часы,Часов",
+			labelsMinutes: "Минуты,Минут",
+			labelsSeconds: "Секунды,Секунд",
+			visual: 'ring color-light glow'
+		};
+
+		Soon.create(element, options);
+	});
+
+script.
+	$(function () {
+		$("input.phone").intlTelInput({
+			utilsScript       : 'js/utils.js',
+			defaultCountry    : 'auto',
+			separateDialCode  : false,
+			nationalMode      : false,
+			initialCountry    : 'auto',
+			geoIpLookup       : function (callback) {
+					$.get("https://ipinfo.io", function () {
+					}, "jsonp").always(function (resp) {
+							var countryCode = (resp && resp.country) ? resp.country : "";
+							callback(countryCode);
+					});
+			},
+			preferredCountries: ['ua', 'ru', 'by', 'kz']
+		});
+
+	});
+
+script.
+	$(window).load(function(){
+		$.getJSON('https://freegeoip.net/json/', function (data) {
+			var country = data.country_code;
+			if (getCookie("phone")) {
+					$("#phone").val(getCookie("phone"));
+			}
+			else if (country === 'UA') {
+					$('#phone').val('+380');
+			}
+			else if (country === "RU") {
+					$('#phone').val('+7');
+			}
+			else {
+					var countryData = $("#phone").intlTelInput("getSelectedCountryData");
+					var dialCode = countryData.dialCode;
+					$('#phone').val('+' + dialCode);
+			}
+		});
+	});
+
+script.
+	function validate(formid)
+		{
+			var output = false;
+			var name, email, phone, utm_source, utm_campaign, utm_medium, utm_term, gf_action, mf_action, plan, sum, sum_usd, product, ga_client_id, country, referer, city;
+			form = $(formid);
+			form.addClass('loading');
+			form.find('input[name="name"]').focus();
+			form.find('input[name="email"]').focus();
+			form.find('input[name="phone"]').focus();
+			form.find('button[type="submit"]').focus();
+			name = form.find('input[name="name"]').val();
+			email = form.find('input[name="email"]').val();
+			phone = form.find('input[name="phone"]').val();
+			type = form.find('input[name="type"]').val();
+			plan = form.find('input[name="plan"]').val();
+			city = form.find('input[name="city"]').val();
+			product = form.find('input[name="product"]').val();
+			sum = form.find('input[name="sum"]').val();
+			utm_source = form.find('input[name="utm_source"]').val();
+			utm_campaign = form.find('input[name="utm_campaign"]').val();
+			utm_medium = form.find('input[name="utm_medium"]').val();
+			utm_term = form.find('input[name="utm_term"]').val();
+			phone = phone.replace(/\s/g, '');
+			gf_action = 'https://docs.google.com/forms/d/e/1FAIpQLSfZUaedzmCoD1q8PI_k8xqx82JAptTuGeu6wG6cCyd6p6gCTQ/formResponse'; // put here google form action;
+			mh_action = "https://pay.womaninsight.club/vpo_so_short";
+			referer = window.location.href;
+			//- var ga = getCookie('_ga').split('.');
+			//- ga_client_id = ga[2] + '.' + ga[3];
+			if(city == 'kiev' || city == 'odessa') {
+				sum = sum * 27;
+			}
+			if(city == 'moscow') {
+				sum = sum * 63;
+			}
+			if ($('.not_error').length >= 3)
+			{
+				$.ajax(
+				{
+					type: "POST",
+					url: 'gf/export.php',
+					async: false,
+					data:
+					{
+						gf_action: gf_action,
+						name: name,
+						email: email,
+						phone: phone,
+						city: city,
+						plan: plan,
+						type: type,
+						utm_campaign: utm_campaign,
+						utm_source: utm_source,
+						utm_medium: utm_medium,
+						utm_term: utm_term
+					},
+					success: function(json_data)
+					{
+						console.log('data sended to GF!');
+					}
+				}),
+				$.ajax(
+				{
+					type: "POST",
+					url: 'mh/export.php',
+					async: false,
+					data:
+					{
+						mh_action: mh_action,
+						name: name,
+						email: email,
+						phone: phone,
+						city: city,
+						type: type,
+						sum: sum,
+						plan: plan,
+						product: product,
+						utm_campaign: utm_campaign,
+						utm_source: utm_source,
+						utm_medium: utm_medium,
+						utm_term: utm_term
+					},
+					success: function(json_data)
+					{
+						var obj = JSON.parse(json_data);
+						var redirect = obj.redirect;
+						setCookie('name', name, 365);
+						setCookie('email', email, 365);
+						setCookie('phone', phone, 365);
+						console.log('data sended!');
+						if (city == 'almaty'){
+							redirect == 'https://www.vpo.womaninsight.club/success/';
+							}
+						console.log(json_data);
+						window.location.href = redirect;
+						setTimeout(function(){
+							form.removeClass('loading');
+						}, 5000)
+						output =false;
+					}
+				});
+			}
+			else
+			{
+				form.find('input.error').first().focus();
+				form.removeClass('loading');
+			}
+			return output;
+		};
+
+
+script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAaSJb8nc1_lbRPzx6DTATFknvbwZ5HU-4')
+
+script.
+	$(function () {
+
+		//popup link
+		$("body").click(function () {
+			$('.popup-layout').fadeOut(200);
+		});
+		$(".popup, .popup-link").click(function (e) {
+			e.stopPropagation();
+		});
+
+		// popup close
+		$('.popup__close').click(function () {
+			hidePopup();
+		});
+	});
+
+
+	function showPopup(popupId) {
+		hidePopup();
+		$(popupId).fadeIn(400);
+	}
+	function hidePopup() {
+		$('.popup-layout, .popup-layout-payment, .modal').fadeOut(400);
+	}
+
+script(type='text/javascript').
+	var geocoder;
+
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+	}
+	//Get the latitude and the longitude;
+	function successFunction(position) {
+		var lat = position.coords.latitude;
+		var lng = position.coords.longitude;
+		codeLatLng(lat, lng)
+	}
+
+	function errorFunction() {
+		console.log("Geocoder failed");
+	}
+
+	function initialize() {
+		geocoder = new google.maps.Geocoder();
+	}
+
+	function codeLatLng(lat, lng) {
+
+		var latlng = new google.maps.LatLng(lat, lng);
+		geocoder.geocode({'latLng': latlng}, function (results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+				console.log(results);
+				if (results[1]) {
+					//formatted address
+					console.log(results[0].formatted_address);
+					//find country name
+					for (var i = 0; i < results[0].address_components.length; i++) {
+						for (var b = 0; b < results[0].address_components[i].types.length; b++) {
+
+							//there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
+							if (results[0].address_components[i].types[b] == "administrative_area_level_1") {
+								//this is the object you are looking for
+								city = results[0].address_components[i];
+								break;
+							}
+						}
+					}
+					//city data
+					console.log(city.short_name + " " + city.long_name);
+					checkCity(city.short_name, city.long_name)
+
+				} else {
+					console.log("No results found");
+				}
+			} else {
+				console.log("Geocoder failed due to: " + status);
+			}
+		});
+	}
+
+	function checkCity(shortName, longName) {
+		if(shortName.indexOf('Киев') != -1 || shortName.indexOf('Київ') != -1 || shortName.indexOf('Kyiv') != -1 || shortName.indexOf('Kiev') != -1 || longName.indexOf('Киев') != -1 || longName.indexOf('Київ') != -1 || longName.indexOf('Kyiv') != -1 || longName.indexOf('Kiev') != -1) {
+			$($(".main-footer-phone--active").detach()).prependTo(".main-footer-phones__hidden").removeClass('main-footer-phone--active');
+			$($("#phone-kyiv").detach()).appendTo(".main-footer-phone-active").addClass('main-footer-phone--active');
+		} else if(shortName.indexOf('Одесса') != -1 || shortName.indexOf('Одеса') != -1 || shortName.indexOf('Odessa') != -1 || longName.indexOf('Одесса') != -1 || longName.indexOf('Одеса') != -1 || longName.indexOf('Odessa') != -1) {
+			$($(".main-footer-phone--active").detach()).prependTo(".main-footer-phones__hidden").removeClass('main-footer-phone--active');
+			$($("#phone-odessa").detach()).appendTo(".main-footer-phone-active").addClass('main-footer-phone--active');
+		} else if(shortName.indexOf('Алматы') != -1 || shortName.indexOf('Алмати') != -1 || shortName.indexOf('Almaty') != -1 || longName.indexOf('Алматы') != -1 || longName.indexOf('Алмати') != -1 || longName.indexOf('Almaty') != -1) {
+			$($(".main-footer-phone--active").detach()).prependTo(".main-footer-phones__hidden").removeClass('main-footer-phone--active');
+			$($("#phone-almaty").detach()).appendTo(".main-footer-phone-active").addClass('main-footer-phone--active');
+		} else if(shortName.indexOf('Москва') != -1 || shortName.indexOf('Москва') != -1 || shortName.indexOf('Moscow') != -1 || longName.indexOf('Москва') != -1 || longName.indexOf('Москва') != -1 || longName.indexOf('Moscow') != -1) {
+			$($(".main-footer-phone--active").detach()).prependTo(".main-footer-phones__hidden").removeClass('main-footer-phone--active');
+			$($("#phone-moscow").detach()).appendTo(".main-footer-phone-active").addClass('main-footer-phone--active');
+		}
+	}
+
+
+script.
+	$(function () {
+		initialize();
+
+		$('.main-footer-phones__toggle').click(function () {
+			$phonesBlock = $(this).closest('.main-footer-phones');
+			$phonesBlock.toggleClass('main-footer-phones--active');
+			$phonesBlock.find('.main-footer-phones__hidden').slideToggle(500);
+		});
+	});

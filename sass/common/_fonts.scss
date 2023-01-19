@@ -1,0 +1,10 @@
+@import "common/_mixins.scss";
+
+
+
+@include font-face("Circe", "../fonts/CirceLight/CirceLight", 300);
+@include font-face("Circe", "../fonts/CirceRegular/CirceRegular", 400);
+@include font-face("Circe", "../fonts/CirceBold/CirceBold", 700);
+@include font-face("Circe", "../fonts/CirceExtraBold/CirceExtraBold", 900);
+
+@include font-face("Proxima Nova", "../fonts/ProximaNovaLight/ProximaNovaLight", 300);
